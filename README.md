@@ -1,4 +1,14 @@
-# WasabiGBA V0.2.4
+# WasabiGBA V0.2.4-SCFW
+
+> [!NOTE]
+> This is the baseline build of WasabiGBA that's guaranteed to work on GBA clones.
+> Built successfully with the ff.:
+> * [KS5360 build ee9413b](https://github.com/FluBBaOfWard/KS5360/tree/ee9413ba3b0563bb4172d43d5efe66f471382d9f)
+> * [GBA Shared build b8d4fec](https://github.com/FluBBaOfWard/GBA_Shared/tree/b8d4fec9409cd8481431766a37abc45b500e0525)
+> * [WasabiGBA build 1a844c2](https://github.com/OmDRetro/WasabiGBA-SCFW/commit/1a844c228567e254c6bc5cda3bcf46e1293334ec#diff-32e8fc5a7a6b9f84aa338b60ba373fe810b64cd87c9c8f4743b807e4bfb4ab28)
+>
+> This build also has _splash screen support_.
+
 
 <img align="right" width="220" src="./logo.png" />
 
