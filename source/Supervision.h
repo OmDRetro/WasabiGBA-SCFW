@@ -17,7 +17,7 @@ int getStateSize(void);
 /// Setup Supervision background for emulator screen.
 void setupEmuBackground(void);
 
-void setupEmuBorderPalette(void);
+void setupBorderPalette(void);
 
 #ifdef __cplusplus
 } // extern "C"

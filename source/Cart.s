@@ -1,7 +1,5 @@
 #ifdef __arm__
 
-//#define EMBEDDED_ROM
-
 #include "Shared/gba_asm.h"
 #include "KS5360/KS5360.i"
 #include "ARM6502/M6502.i"
@@ -37,9 +35,8 @@
 	.arm
 
 	.section .rodata
-	.align 8
+	.align 2
 
-#ifdef EMBEDDED_ROM
 ROM_Space:
 //	.incbin "roms/Alien.sv"
 //	.incbin "roms/Bubble World (1992) (Bon Treasure).sv"
@@ -52,7 +49,6 @@ ROM_Space:
 //	.incbin "roms/Kitchen War (1992) (Bon Treasure).sv"
 //	.incbin "roms/WaTest.sv"
 ROM_SpaceEnd:
-#endif
 
 	.section .ewram,"ax"
 	.align 2
@@ -62,14 +58,12 @@ machineInit: 					;@ Called from C
 ;@----------------------------------------------------------------------------
 	stmfd sp!,{r4-r11,lr}
 
-#ifdef EMBEDDED_ROM
-	ldr r0,=romSize
-	mov r1,#ROM_SpaceEnd-ROM_Space
-	str r1,[r0]
-	ldr r0,=romSpacePtr
-	ldr r7,=ROM_Space
-	str r7,[r0]
-#endif
+//	ldr r0,=romSize
+//	mov r1,#ROM_SpaceEnd-ROM_Space
+//	str r1,[r0]
+//	ldr r0,=romSpacePtr
+//	ldr r7,=ROM_Space
+//	str r7,[r0]
 
 	bl memoryMapInit
 	bl gfxInit
@@ -136,7 +130,7 @@ memoryMapInit:
 
 	ldr r1,=ram6502R
 	str r1,[r0,#m6502ReadTbl+0*4]
-	ldr r1,=svReadIO
+	ldr r1,=wsvReadIO
 	str r1,[r0,#m6502ReadTbl+1*4]
 	ldr r1,=vram6502R
 	str r1,[r0,#m6502ReadTbl+2*4]
@@ -153,7 +147,7 @@ memoryMapInit:
 
 	ldr r1,=ram6502W
 	str r1,[r0,#m6502WriteTbl+0*4]
-	ldr r1,=svWriteIO
+	ldr r1,=wsvWriteIO
 	str r1,[r0,#m6502WriteTbl+1*4]
 	ldr r1,=vram6502W
 	str r1,[r0,#m6502WriteTbl+2*4]
@@ -292,7 +286,7 @@ bankPointers:
 #else
 	.section .bss
 #endif
-	.align 8
+	.align 2
 svRAM:
 	.space 0x2000
 svVRAM:

@@ -5,13 +5,8 @@
 extern "C" {
 #endif
 
-#define ALLOW_SPEED_HACKS	(1<<17)
-#define ENABLE_HEADPHONES	(1<<18)
-#define ALLOW_REFRESH_CHG	(1<<19)
-
 extern u8 gGammaValue;
 extern u8 gContrastValue;
-extern u8 gBorderEnable;
 
 void setupGUI(void);
 void enterGUI(void);
@@ -25,6 +20,9 @@ void resetGame(void);
 void uiNullNormal(void);
 void uiMainMenu(void);
 void uiFile(void);
+void uiSettings(void);
+void uiController(void);
+void uiDisplay(void);
 void uiAbout(void);
 void uiLoadGame(void);
 
@@ -34,6 +32,11 @@ void debugIOUnimplR(u8 port);
 void debugIOUnimplW(u8 port, u8 val);
 void debugUndefinedInstruction(void);
 void debugCrashInstruction(void);
+
+void swapABSet(void);
+
+void gammaSet(void);
+void contrastSet(void);
 
 #ifdef __cplusplus
 } // extern "C"

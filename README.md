@@ -70,8 +70,8 @@ Some info about the emulator and game...
 
 ### Sleep
 
-Put the GBA into sleepmode. START+SELECT wakes up from sleep mode (activated
- from this menu or from 5/10/30 minutes of inactivity).
+Put the GBA into sleepmode.
+START+SELECT wakes up from sleep mode (activated from this menu or from	5/10/30	minutes of inactivity).
 
 ### Quit Emulator
 
@@ -90,16 +90,15 @@ All games should "work".
 
 ## Credits
 
-```text
 Huge thanks to Loopy for the incredible PocketNES, without it this emu would
 probably never have been made.
 Thanks to:
-Peter Trauner & Kevin Horton for docs about the Supervision.
-Osman Celimli for docs, tests & help about the Supervision. <http://tailchao.com/Wataroo/>
-```
+	Peter Trauner & Kevin Horton for docs about the Supervision.
+	Osman Celimli for docs, tests & help about the Supervision. <http://tailchao.com/Wataroo/>
+
 
 Fredrik Ahlström
 
-X/Twitter @TheRealFluBBa
+Twitter @TheRealFluBBa
 
-<https://www.github.com/FluBBaOfWard>
+<http://www.github.com/FluBBaOfWard>
